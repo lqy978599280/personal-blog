@@ -13,11 +13,15 @@ const store = new Vuex.Store({
     show_header: localStorage.show_header || false,
     authorname:localStorage.author || false,
     password:'',
-    email:''
+    email:'',
+    blogs:[],
   },
   mutations: {
     tran(state,data){
     state.myobjects.push(data);
+    },
+    subBlogs(state,data){
+      state.blogs = data;
     },
     tranauthor(state,data){
       state.authors.push(data);

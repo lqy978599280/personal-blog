@@ -1,38 +1,52 @@
 <template>
-<div class="outter">
-  <div class="inner">
-    <router-link to="/Home"> <el-button class="left_button" @click="mode1" >预 <br> 览 <br> 模 <br> 式</el-button></router-link>
-    <router-link to="/Login" ><el-button class="right_button">作 <br> 者 <br> 登 <br> 陆 </el-button></router-link>
+  <div class="outter">
+    <div class="inner">
+      <router-link to="/Home">
+        <el-button class="left_button" @click="mode1">预 <br> 览 <br> 模 <br> 式</el-button>
+      </router-link>
+      <router-link to="/Login">
+        <el-button class="right_button">作 <br> 者 <br> 登 <br> 陆</el-button>
+      </router-link>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
-    export default {
-        name: "Log",
-      methods:{
-          mode1:function () {
-            this.$store.commit('mode_hidden');
-            this.$store.commit('change_show_header');
-          },
+  export default {
+    name: "Log",
+    methods: {
+      mode1: function () {
+        this.$store.commit('mode_hidden');
+        this.$store.commit('change_show_header');
       },
-      beforeCreate(){
-        localStorage.show_header = false;
-        localStorage.author = 'nobody';
-        this.$store.state.show_header = false
-      }
+    },
+    beforeCreate() {
+      localStorage.show_header = false;
+      localStorage.author = 'nobody';
+      this.$store.state.show_header = false
     }
+  }
 </script>
 
 <style scoped>
-.outter{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-}
-  .inner{
+
+    @font-face {
+      font-family: 'myfont';
+      src: url('../../static/fonts/font5.ttf');
+    }
+  * {
+    font-family: 'myfont';
+  }
+
+  .outter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .inner {
     width: 100vw;
     height: 100vh;
     margin: 0 auto;
@@ -42,66 +56,75 @@
     line-height: 200px;
     position: relative;
   }
-  @media (min-width: 768px) {
-    .el-button{
+
+  @media (min-width: 600px) {
+    .el-button {
       width: 5vw;
       max-width: 5vw;
-      height:  5vh;
-      max-height:5vh ;
-      font-size:2.3vw  ;
+      height: 15vw;
+      max-height: 15vw;
+      font-size: 2.5vw;
       border: 0 transparent;
       background-color: transparent;
       opacity: 0.5;
       text-align: left;
+      padding:  0 2.5vh;
+      margin-top: -2vw;
+    }
 
-    }.left_button{
-       position: absolute;
-       left: 17.6%  ;
-       top: 49%;
-       float: left;
-     }
-    .right_button{
+    .left_button {
       position: absolute;
-      left: 63.5% ;
+      left: 17.6%;
+      top: 49%;
+      float: left;
+    }
+
+    .right_button {
+      position: absolute;
+      left: 63.5%;
       top: 48.5%;
       float: right;
     }
   }
-@media (max-width: 768px) {
-  .el-button{
-    width: 5vw;
-    max-width: 5vw;
-    height:  15vw;
-    max-height:15vw ;
-    font-size:1.5vw  ;
-    border: 0 transparent;
-    background-color: transparent;
-    opacity: 0.5;
-    text-align: left;
-  }.left_button{
-     position: absolute;
-     left: 14%  ;
-     top: 48%;
-     float: left;
-   }
-  .right_button{
-    position: absolute;
-    left: 60.2% ;
-    top: 48%;
-    float: right;
-  }
-}
 
-/*.left_button{*/
+  @media (max-width: 600px) {
+    .el-button {
+      width: 5vw;
+      max-width: 5vw;
+      height: 15vw;
+      max-height: 15vw;
+      font-size: 1.5vw;
+      border: 0 transparent;
+      background-color: transparent;
+      opacity: 0.5;
+      text-align: left;
+    }
+
+    .left_button {
+      position: absolute;
+      left: 14%;
+      top: 48%;
+      float: left;
+    }
+
+    .right_button {
+      position: absolute;
+      left: 60.2%;
+      top: 48%;
+      float: right;
+    }
+  }
+
+  /*.left_button{*/
   /*position: absolute;*/
   /*left: 17%  ;*/
   /*top: 50%;*/
   /*float: left;*/
-/*}*/
+  /*}*/
   /*.right_button{*/
-    /*position: absolute;*/
-    /*left: 62.5% ;*/
-    /*top: 50%;*/
-    /*float: right;*/
+  /*position: absolute;*/
+  /*left: 62.5% ;*/
+  /*top: 50%;*/
+  /*float: right;*/
   /*}*/
 </style>

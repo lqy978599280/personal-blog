@@ -14,7 +14,7 @@
       </li>
       <li class="float">
         <router-link to="/About">
-          <p>关于站长</p>
+          <p>关于</p>
         </router-link>
       </li>
       <li class="float">

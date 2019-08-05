@@ -48,7 +48,6 @@ module.exports = {
           'url-loader',
           {
             loader: 'image-webpack-loader',
-
             options: {
               bypassOnDebug: true, // webpack@1.x
               disable: true, // webpack@2.x and newer
@@ -68,7 +67,7 @@ module.exports = {
       },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'file-loader',
+        loader: 'url-loader',
         options: {
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }

@@ -26,11 +26,13 @@
     <div class="right">
       <p >作者：{{blog.author}}</p>
       <p>标题：{{blog.title}}</p>
+      <p>编辑时间：{{blog.nowTime}}</p>
       <div>主题：
         <ul>
           <li v-for="tp in blog.topic">{{tp}}</li>
         </ul>
       </div>
+
     </div>
   </div>
 </template>
@@ -45,10 +47,15 @@
           content: '',
           title: '',
           topic: [],
-          author: ''
+          author: '',
+          nowTime:''
         },
       }
     },
+    mounted(){
+      this.nowTimes()
+    }
+    ,
     methods: {
       submit: function () {
         let obj = AV.Object.createWithoutData('myblog', '5d25fef35dfe8c00082e6ab0');
@@ -63,6 +70,7 @@
               "content":this.blog.content,
               "topic":this.blog.topic,
               "author":this.blog.author,
+              "time" :this.blog.nowTime
             }
           ) ;
           obj.addUnique("blog",this.$store.state.myobjects);
@@ -84,14 +92,22 @@
           //     console.log(data);
           //   }
         }
+      },
+      timeChange:function (t) {
+        this.blog.nowTime = `${t.getMonth()+1}/${t.getDate()} ${t.getHours()}:${t.getMinutes()>=10?t.getMinutes():("0"+t.getMinutes())}`
+
+      },
+      nowTimes(){
+        this.timeChange(new Date())
+        let d = setInterval( () =>{
+          this.timeChange(new Date())
+        },20*1000)
       }
     }
   }
 </script>
 
 <style scoped
-
-
 >
   * {
     margin: 0 auto;

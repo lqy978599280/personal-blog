@@ -92,7 +92,7 @@
     font-size: 22px;
     margin: 0 auto;
     width: 600px;
-    padding: 5px 0;
+    padding: 20px 0;
   }
 
   .name > .el-input {

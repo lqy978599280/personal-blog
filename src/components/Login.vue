@@ -17,13 +17,9 @@
               <div style="display: flex; margin-bottom: 15px">
                 <el-button type="primary" @click="submitForm('ruleForm')" size="mini">登陆</el-button>
                 <el-button @click="resetForm('ruleForm')" class="color" size="mini">重置</el-button>
-              </div>
-
-              <div style="display: flex;">
                 <router-link to="/" tag="el-button" class="color el-button--mini">返回主页</router-link>
-                <router-link to="/Register" tag="el-button" class="color el-button--mini">注册成为作者</router-link>
               </div>
-
+              <router-link to="/Register" tag="label" style="font-size: 18px;cursor: pointer;">没有作者账户？去注册成为作者</router-link>
             </div>
 
           </el-form-item>
@@ -121,7 +117,6 @@
   * {
     font-family: '楷体';
     font-size: 1.5vw;
-
   }
 
   @media (max-width: 568px) {
