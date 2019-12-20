@@ -1,7 +1,7 @@
 <template>
   <div class="bgLogin">
 
-    <div class="leftlog"><span style="font-size: 3.5vw;font-family: 楷体;color: peachpuff;">登陆</span>
+    <div class="leftlog"><span style="font-size:1.5rem;font-family: 楷体;color: peachpuff;">登陆</span>
       <br>
       <div class="login">
         <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
@@ -19,7 +19,7 @@
                 <el-button @click="resetForm('ruleForm')" class="color" size="mini">重置</el-button>
                 <router-link to="/" tag="el-button" class="color el-button--mini">返回主页</router-link>
               </div>
-              <router-link to="/Register" tag="label" style="font-size: 18px;cursor: pointer;">没有作者账户？去注册成为作者</router-link>
+              <router-link to="/Register" tag="label" class="register">没有作者账户？去注册成为作者</router-link>
             </div>
 
           </el-form-item>
@@ -119,33 +119,12 @@
     font-size: 1.5vw;
   }
 
-  @media (max-width: 568px) {
-    .bgLogin {
-      width: 100vw;
-      height: 50vh;
-      display: flex;
-      justify-content: space-around;
-
-    }
-  }
-
-  @media (min-width: 568px) {
-    .bgLogin {
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      justify-content: space-between;
-      position: relative;
-    }
-  }
-
   .bgbglogin {
     width: 70vw;
     background: url("../assets/bglog.jpg") 85% 100% no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
   }
-
   .leftlog {
     width: 46vw;
     max-width: 46vw;
@@ -156,6 +135,73 @@
     background: linear-gradient(to right, mistyrose 0%, white 100%);
     opacity: 0.8;
   }
+  @media (max-width: 5000px) {
+    .bgLogin {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+    }
+    .register{
+      font-size:20px;
+      cursor: pointer;
+    }
+  }
+  @media   (max-width:820px) {
+    .bgLogin {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: space-around;
+    }
+    .register{
+      font-size:0.5rem;
+      cursor: pointer;
+    }
+  }
+  @media   (max-width:420px){
+    .bgLogin {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .register{
+      font-size:0.5rem;
+      cursor: pointer;
+    }
+    .bgbglogin {
+      width: 70vw;
+      height: 50vh;
+      background: url("../assets/bglog.jpg") 42% 100% no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+    }
+    .leftlog {
+      width: 46vw;
+      max-width: 46vw;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(to right, mistyrose 0%, white 100%);
+      opacity: 0.8;
+    }
+    .el-form-item{
+      padding-left: 2rem;
+    }
+    .el-input{
+      width: 100%
+    }
+  }
+
+
+
+
+
   .color {
     background: linear-gradient(to right, #fff5f4 0%, white 100%);
 

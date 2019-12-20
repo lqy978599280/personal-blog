@@ -1,3 +1,96 @@
+<style scoped>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  @media  (max-width: 5000px){
+    .bgound {
+
+      background: url("../assets/简约蓝色背景.jpg") 100% 20% no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+      width: 70vw;
+      margin: 15px auto;
+      padding: 0;
+      border-radius: 10px;
+    }
+
+    .sub {
+      height: 100%;
+      background: rgba(0, 0, 0, 0.1);
+      padding: 15px 0;
+      border-radius: 10px;
+    }
+
+    .name, .msg {
+      text-align: left;
+      font-size: 22px;
+      margin: 0 auto;
+      width: 600px;
+      padding: 20px 0;
+    }
+
+    .name > .el-input {
+      height: 30px;
+      margin-top: 20px;
+
+      font-size: 20px;
+    }
+
+    button {
+      width: 120px;
+      height: 40px;
+      font-size: 26px;
+      padding: 0;
+
+      margin: 15px 0;
+    }
+  }
+  @media  (max-width: 820px){
+    .bgound {
+
+      background: url("../assets/简约蓝色背景.jpg") 100% 20% no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+      width: 100vw;
+      margin: 15px auto;
+      padding: 0;
+      border-radius: 10px;
+    }
+
+    .sub {
+      height: 100%;
+      background: rgba(0, 0, 0, 0.1);
+      padding: 15px 0;
+      border-radius: 10px;
+    }
+
+    .name, .msg {
+      text-align: left;
+      font-size: 22px;
+      margin: 0 auto;
+      width: 80vw;
+      padding: 20px 0;
+    }
+
+    .name > .el-input {
+      height: 30px;
+      margin-top: 20px;
+
+      font-size: 20px;
+    }
+
+    button {
+      width: 4rem;
+      height: 2rem;
+      font-size: 1.1rem;
+      padding: 0;
+
+      margin: 15px 0;
+    }
+  }
+</style>
+
 <template>
   <div style="font-size: 24px;height: 400px; border-radius: 10px">
     <Com>123456</Com>
@@ -63,51 +156,3 @@
   }
 </script>
 
-<style scoped>
-  * {
-    margin: 0;
-    padding: 0;
-  }
-
-  .bgound {
-
-    background: url("../assets/简约蓝色背景.jpg") 100% 20% no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    width: 1050px;
-    margin: 15px auto;
-    padding: 0;
-    border-radius: 10px;
-  }
-
-  .sub {
-    height: 100%;
-    background: rgba(0, 0, 0, 0.1);
-    padding: 15px 0;
-    border-radius: 10px;
-  }
-
-  .name, .msg {
-    text-align: left;
-    font-size: 22px;
-    margin: 0 auto;
-    width: 600px;
-    padding: 20px 0;
-  }
-
-  .name > .el-input {
-    height: 30px;
-    margin-top: 20px;
-
-    font-size: 20px;
-  }
-
-  button {
-    width: 120px;
-    height: 40px;
-    font-size: 26px;
-    padding: 0;
-
-    margin: 15px 0;
-  }
-</style>

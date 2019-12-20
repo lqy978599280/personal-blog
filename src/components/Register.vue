@@ -2,9 +2,9 @@
 <template>
   <div class="bgRegister">
 
-    <div class="rightlog"> <span style="font-size: 3vw;margin-bottom: 30px;color: peachpuff; ">注册成为作者</span>
+    <div class="rightlog"> <span style="font-size: 1.3rem;margin-bottom:1rem;color: peachpuff; ">注册成为作者</span>
       <div class="register">
-        <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+        <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="8rem" class="demo-ruleForm">
           <el-form-item label="作者名" prop="name">
             <el-input type="text" v-model="ruleForm.name" autocomplete="off"></el-input>
           </el-form-item>
@@ -157,41 +157,96 @@
     font-family: '楷体';
     font-size: 1.5vw;
   }
-  @media (max-width: 568px) {
+  @media (max-width: 5000px) {
     .bgRegister{
       width: 100vw;
-      height: 60vh;
+      height: 100vh;
       display: flex;
       justify-content: space-around;
     }
+    .rightlog{
+      width: 52vw;
+      max-width: 52vw;
+        height:100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(to right, mistyrose 0%,white 100%);
+      opacity: 0.8;
+    }
+    .bgbg{
+      width: 100vw;
+      height: 100vh;
+      background: url("../assets/bglog.jpg" ) 85.4% 100% no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+    }
   }
-  @media (min-width: 568px) {
+  @media (max-width: 820px) {
     .bgRegister{
       width: 100vw;
       height: 100vh;
       display: flex;
       justify-content: space-between;
       position: relative;
-
+      align-items: center;
+    }
+    .bgbg{
+      width: 100vw;
+      height: 100vh;
+      background: url("../assets/bglog.jpg" ) 85.4% 100% no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+    }
+    .rightlog{
+      width: 52vw;
+      max-width: 52vw;
+      height:100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(to right, mistyrose 0%,white 100%);
+      opacity: 0.8;
     }
   }
-  .bgbg{
-    width: 68vw;
+  @media (max-width: 420px) {
+    .bgRegister{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      align-items: center;
+    }
+    .bgbg{
+      width: 100vw;
+      height: 60vh;
+      background: url("../assets/bglog.jpg" ) 50.4% 100% no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+    }
+    .rightlog{
+      width: 52vw;
+      max-width: 52vw;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(to right, mistyrose 0%,white 100%);
+      opacity: 0.8;
+    }
+    .el-form-item{
+      padding-left: 2rem;
+    }
+    .el-input{
+      width: 100%
+    }
+  }
 
-    background: url("../assets/bglog.jpg" ) 85.4% 100% no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-  }
-  .rightlog{
-    width: 52vw;
-    max-width: 52vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: linear-gradient(to right, mistyrose 0%,white 100%);
-    opacity: 0.8;
-  }
+
   .color{
     background: linear-gradient(to right,#fff5f4  0%,white 100%);
   }

@@ -40,7 +40,7 @@ const store = new Vuex.Store({
     }
    ,
     change_show_header(state){
-   state.show_header = true
+      state.show_header = true
       localStorage.show_header = true
     }
   }

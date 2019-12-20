@@ -46,18 +46,26 @@
     height: 100vh;
   }
 
-  .inner {
-    width: 100vw;
-    height: 100vh;
-    margin: 0 auto;
-    background: url("../assets/bglog.png") no-repeat fixed 50% 50%;
-    -webkit-background-size: 100%;
-    background-size: 100%;
-    line-height: 200px;
-    position: relative;
-  }
 
-  @media (min-width: 600px) {
+
+  @media (max-width: 5000px) {
+    .outter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+    }
+    .inner {
+      width: 100vw;
+      height: 100vh;
+      margin: 0 auto;
+      background: url("../assets/bglog.png") no-repeat fixed 50% 50%;
+      -webkit-background-size: 100%;
+      background-size: 100%;
+      line-height: 200px;
+      position: relative;
+    }
     .el-button {
       width: 5vw;
       max-width: 5vw;
@@ -87,13 +95,33 @@
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 420px) {
+
+    .outter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+
+    }
+    .inner {
+      width: 100vw;
+      height: 100vh;
+      margin: 0 auto;
+      line-height: 200px;
+      position: relative;
+      background: url("../assets/bglog.png") no-repeat fixed 30% 50%;
+      -webkit-background-size: 150%;
+      background-size: 150%;
+
+    }
     .el-button {
       width: 5vw;
       max-width: 5vw;
-      height: 15vw;
-      max-height: 15vw;
-      font-size: 1.5vw;
+      font-size: 1rem;
+      height: 25vw;
+      max-height: 25vw;
       border: 0 transparent;
       background-color: transparent;
       opacity: 0.5;
@@ -102,29 +130,18 @@
 
     .left_button {
       position: absolute;
-      left: 14%;
+      left: 9%;
       top: 48%;
       float: left;
     }
 
     .right_button {
       position: absolute;
-      left: 60.2%;
-      top: 48%;
+      left: 77.6%;
+      top:48%;
       float: right;
     }
   }
 
-  /*.left_button{*/
-  /*position: absolute;*/
-  /*left: 17%  ;*/
-  /*top: 50%;*/
-  /*float: left;*/
-  /*}*/
-  /*.right_button{*/
-  /*position: absolute;*/
-  /*left: 62.5% ;*/
-  /*top: 50%;*/
-  /*float: right;*/
-  /*}*/
 </style>
+

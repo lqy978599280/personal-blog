@@ -1,14 +1,14 @@
 <template>
 <div id="singleblog" >
-  <h1 v-color style="text-indent: 30px;position: relative;text-align: left;font-size: 28px;padding: 30px 20px 0 20px ;padding-bottom: 10px;">{{blog.title}}</h1>
-  <p style="font-size: 18px;float: left;padding-left: 50px;">作者：{{blog.author}}</p>
-  <p style="font-size: 18px;float: left;padding-left: 50px;">时间：{{blog.time}}</p>
-  <ul  style="list-style-type: none;float: right;font-size: 18px">
-    分类：<li style="float: right; padding-right: 40px; ;font-size: 18px;"v-for="tp in blog.topic">{{tp}}</li>
+  <h1 v-color class="title" >{{blog.title}}</h1>
+  <p class="info" >作者：{{blog.author}}</p>
+  <p class="info" >时间：{{blog.time}}</p>
+  <ul class="class"  >
+   <li class="info" v-for="tp in blog.topic"> 分类：{{tp}}</li>
   </ul>
-  <article style="text-align:left;font-size: 25px;white-space: pre-line;padding: 40px 50px 40px 50px; margin-bottom: 20px; ;">{{blog.content}}</article>
+  <div v-html="blog.content" class="content" ></div>
 
-  <router-link to="/Home"  ><el-button style="margin:  0 0 10px 0;" >返回主页</el-button></router-link>
+  <router-link to="/Home"  ><el-button size="mini" style="margin:  0 0 10px 0;" >返回主页</el-button></router-link>
 </div>
 </template>
 
@@ -40,13 +40,76 @@
 </script>
 
 <style scoped>
-  #singleblog{
-    width: 1050px;
-    max-width: 1050px;
-    margin: 30px auto;
-    background-color: snow;
-    border: 1px dotted beige;
-    border-radius: 20px;
-    overflow: hidden;
+  @media (max-width: 5000px) {
+    #singleblog{
+      width: 70vw;
+      max-width: 70vw;
+      margin: 30px auto;
+      background-color: snow;
+      border: 1px dotted beige;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .title{
+      text-indent: 30px;
+      position: relative;
+      text-align: left;
+      font-size: 1.8rem;
+      padding: 30px 20px 10px 20px ;
+    }
+    .info{
+     font-size: 1.1rem;
+      float: left;
+      padding: 0 50px
+    }
+    .class{
+      list-style-type: none;
+      float: right;
+      font-size: 1.1rem
+    }
+    .content{
+      text-align:left;
+      font-size: 1.4rem;
+      white-space: pre-line;
+      padding: 40px 50px 40px 50px;
+      margin-bottom: 20px;
+    }
+  }
+  @media (max-width: 820px) {
+    #singleblog {
+      width: 100vw;
+      max-width: 100vw;
+      margin: 4vh auto;
+      background-color: snow;
+      border: 1px dotted beige;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .title{
+      text-indent: 0;
+      position: relative;
+      padding: 1rem 1.1rem ;
+      text-align: left;
+      font-size: 1.4rem;
+    }
+    .info{
+      font-size: 0.9rem;
+      float: left;
+      padding-left: 1.4rem
+
+    }
+    .class{
+      list-style-type: none;
+      float: left;
+      font-size: 0.9rem
+    }
+    .content{
+      display: block;
+      text-align:left;
+      font-size: 0.9rem;
+      white-space: pre-line;
+      padding: 3rem 1.5rem;
+      margin-bottom: 20px;
+    }
   }
 </style>
